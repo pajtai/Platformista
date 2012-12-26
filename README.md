@@ -3,6 +3,8 @@ platformista
 
 ### Features to implement:
 
+* Game Engine
+    * [requestAnimationFrame](http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html) with setInterval as fall back
 * Input
     * Seamless mobile support
         * Keyboard - fall back to touch (screen area for arrows, tap for fire)
