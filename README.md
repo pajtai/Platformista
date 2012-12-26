@@ -8,10 +8,13 @@ platformista
         * Keyboard - fall back to touch (screen area for arrows, tap for fire)
 * Game Play
     * Save and play back
-* Characters
-    * "being" objects
-    * customized using object composition with standard available add ons or custom
-    * line of site
+* Graphic elements
+    * inView method
+    * visible method
+    * Characters
+        * "being" objects
+        * customized using object composition with standard available add ons or custom
+        * line of site
 * Platform
     * ASCII map to platform
         * ASCII character to sprite / texture definitions
