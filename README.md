@@ -11,6 +11,7 @@ platformista
 * Characters
     * "being" objects
     * customized using object composition with standard available add ons or custom
+    * line of site
 * Platform
     * ASCII map to platform
         * ASCII character to sprite / texture definitions
@@ -19,3 +20,5 @@ platformista
         * Tile by tile
     * Map rotation
     * Map zooming
+* Linear Algebra
+    * Try closure: http://stepheneb.github.com/webgl-matrix-benchmarks/matrix_benchmark.html
