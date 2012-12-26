@@ -20,5 +20,7 @@ platformista
         * Tile by tile
     * Map rotation
     * Map zooming
+    * Platform editor
+        * Simple drag and drop editor that outpus JSON that can be used as Platformista input
 * Linear Algebra
     * Try closure: http://stepheneb.github.com/webgl-matrix-benchmarks/matrix_benchmark.html
