@@ -7,7 +7,9 @@
             x: 0,
             y: 0,
 
-            velocity: [0, 0, 0]
+            velocity: [0, 0, 0],
+
+            sprite: {}
         }
     });
 }(Backbone, window.plat));
