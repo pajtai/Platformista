@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>Platformista Demo</title>
+
+    <!-- final version will have min / concat / amd options -->
+
+    <!-- build:js platformista.min.concat.js -->
+    <!-- vendors -->
+    <script type="text/javascript" src="../application/vendors/lodash.1.0.0.rc.3.js"></script>
+    <script type="text/javascript" src="../application/vendors/jquery.1.8.3.js"></script>
+    <script type="text/javascript" src="../application/vendors/backbone.0.9.9.js"></script>
+
+    <script type="text/javascript" src="../application/core/platform.js"></script>
+
+    <!-- Models -->
+    <script type="text/javascript" src="../application/Models/Engine.js"></script>
+
+    <!-- Workers -->
+    <script type="text/javascript" src="../application/Workers/Engine.js"></script>
+
+    <script type="text/javascript" src="../application/setup.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <canvas id="game"></canvas>
+</body>
+</html>

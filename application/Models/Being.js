@@ -1,6 +1,6 @@
 (function(Backbone, plat){
 
-    plat.namespace('models').Being = Backbone.Model.extend({
+    plat.Models.Being = Backbone.Model.extend({
 
         defaults: {
 
@@ -12,4 +12,4 @@
             sprite: {}
         }
     });
-}(Backbone, window.plat));
+}(Backbone, plat));

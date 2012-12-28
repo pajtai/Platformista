@@ -1,6 +1,6 @@
 (function(Backbone, plat){
 
-    plat.namespace('models').Viewport = Backbone.Model.extend({
+    plat.Models.Viewport = Backbone.Model.extend({
 
         defaults: {
 
@@ -17,4 +17,4 @@
             centerY: 200
         }
     });
-}(Backbone, window.plat));
+}(Backbone, plat));

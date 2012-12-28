@@ -1,6 +1,6 @@
 (function(Backbone, plat){
 
-    plat.namespace('models').Tilemap = Backbone.Model.extend({
+    plat.Models.Tilemap = Backbone.Model.extend({
 
         defaults: {
 
@@ -20,4 +20,4 @@
             mapDefinitions: {}
         }
     });
-}(Backbone, window.plat));
+}(Backbone, plat));
