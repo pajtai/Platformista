@@ -4,9 +4,6 @@
 
         defaults: {
 
-            // Maximal frames per second updates to the ui
-            fps: 60,
-
             // Game ticks per second
             gps: 100,
 

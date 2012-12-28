@@ -9,6 +9,7 @@
     models.engine = new Models.Engine();
 
     // Workers
-    workers.engine = new Workers.Engine();
+    workers.engine = new Workers.Engine(models.engine);
 
+    console.log("finished setup.js");
 }(plat));

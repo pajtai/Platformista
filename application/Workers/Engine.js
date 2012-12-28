@@ -1,26 +1,46 @@
 (function (plat, window) {
 
-    var Workers = plat.Workers;
+    var Workers = plat.Workers,
+        time = plat.utilities.time,
+        Engine = function(model) {
 
-    Workers.Engine = function() {
-
+        this.model = model;
     };
 
-    Workers.Engine.prototype.start = function() {
+    Engine.prototype.start = function() {
 
+        var model = this.model;
+
+        this.model.set('engineStart', time.ms());
+
+        window.setInterval(this.updateGame, this.model.get('gps'));
+
+        this.requestAnimationFrame(this.updateUi.bind(this));
     };
 
-    Workers.Engine.prototype.requestAnimationFrame = (function () {
+    Engine.prototype.updateUi = function() {
 
-        // TODO: add which one was chosen to the engine model
-        return  window.requestAnimationFrame    ||
-            window.webkitRequestAnimationFrame  ||
-            window.mozRequestAnimationFrame     ||
-            window.oRequestAnimationFrame       ||
-            window.msRequestAnimationFrame      ||
-            function (callback) {
-                window.setTimeout(callback, 1000/60);
-            };
-    }());
+        console.log("update ui");
+        this.requestAnimationFrame(this.updateUi.bind(this));
+    };
 
+    Engine.prototype.requestAnimationFrame = (function(){
+
+        return (window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame  ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback) {
+
+                this.setTimeout(callback, 1000 / 60);
+            }).bind(window);
+    })();
+
+    Engine.prototype.updateGame = function() {
+
+        console.log("update game");
+    };
+
+    Workers.Engine = Engine;
 }(plat, window));

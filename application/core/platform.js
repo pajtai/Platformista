@@ -12,7 +12,9 @@
         views: {},
 
         Workers: {},
-        workers: {}
+        workers: {},
+
+        utilities: {}
     };
 
     // TODO: build task to create AMD version, min, concat, etc
