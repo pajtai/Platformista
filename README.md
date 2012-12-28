@@ -5,6 +5,7 @@ platformista
 
 * Game Engine
     * [requestAnimationFrame](http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html) with setInterval as fall back
+    * position calculated at each tick, sprite animation calculated at each update
 * Platform
     * ASCII map to platform
         * ASCII character to sprite / texture definitions
