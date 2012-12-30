@@ -24,7 +24,7 @@ test("for 2 fps for 1 second", function() {
 
         uiTicks = engine.get('uiTicks');
         gameTicks = engine.get('gameTicks');
-        ok(1 <= uiTicks && uiTicks <= 3,  "~2 ui ticks in a second");
-        ok(50 < gameTicks && gameTicks < 110, "~100 game ticks in a seoncd");
+        ok(1 <= uiTicks && uiTicks <= 3,  "~2 ui ticks in a second: " + uiTicks + " ticks.");
+        ok(50 < gameTicks && gameTicks < 110, "~100 game ticks in a second: " + gameTicks + " ticks.");
     }, 1000);
 });
