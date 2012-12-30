@@ -4,6 +4,11 @@
 
         defaults: {
 
+            // Maximum allowed fps
+            fps: 60,
+
+            msFps: 1000 / 60,
+
             // Game ticks per second
             gps: 100,
 
@@ -17,7 +22,11 @@
             engineStart: 0,
 
             // fps running 1 second average
-            averageFps: 0
+            averageFps: 0,
+
+            msPreviousUiTick: 0,
+
+            msPreviousGameTick: 0
         }
     });
 }(Backbone, plat));

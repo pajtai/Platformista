@@ -3,49 +3,33 @@
 <head>
     <title>Platformista Tests</title>
 
-    <link rel="stylesheet" type="text/css" href="lib/jasmine-1.3.1/jasmine.css">
-    <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine.js"></script>
-    <script type="text/javascript" src="lib/jasmine-1.3.1/jasmine-html.js"></script>
+    <link rel="stylesheet" type="text/css" href="qunit-1.10.0/qunit.1.10.0.css">
 
-    <!-- include source files here... -->
-    <script type="text/javascript" src="src/Player.js"></script>
-    <script type="text/javascript" src="src/Song.js"></script>
+    <!-- build:js platformista.min.concat.js -->
+    <!-- vendors -->
+    <script type="text/javascript" src="../application/vendors/lodash.1.0.0.rc.3.js"></script>
+    <script type="text/javascript" src="../application/vendors/jquery.1.8.3.js"></script>
+    <script type="text/javascript" src="../application/vendors/backbone.0.9.9.js"></script>
 
-    <!-- include spec files here... -->
-    <script type="text/javascript" src="spec/SpecHelper.js"></script>
-    <script type="text/javascript" src="spec/PlayerSpec.js"></script>
+    <script type="text/javascript" src="../application/core/platform.js"></script>
 
-    <script type="text/javascript">
-        (function() {
-            var jasmineEnv = jasmine.getEnv();
-            jasmineEnv.updateInterval = 1000;
+    <!-- Utilities -->
+    <script type="text/javascript" src="../application/utilities/time.js"></script>
 
-            var htmlReporter = new jasmine.HtmlReporter();
+    <!-- Models -->
+    <script type="text/javascript" src="../application/Models/Engine.js"></script>
 
-            jasmineEnv.addReporter(htmlReporter);
+    <!-- Workers -->
+    <script type="text/javascript" src="../application/Workers/Engine.js"></script>
 
-            jasmineEnv.specFilter = function(spec) {
-                return htmlReporter.specFilter(spec);
-            };
-
-            var currentWindowOnload = window.onload;
-
-            window.onload = function() {
-                if (currentWindowOnload) {
-                    currentWindowOnload();
-                }
-                execJasmine();
-            };
-
-            function execJasmine() {
-                jasmineEnv.execute();
-            }
-
-        })();
-    </script>
+    <script type="text/javascript" src="../application/setup.js"></script>
+    <!-- endbuild -->
 
 </head>
 
 <body>
+    <div id="qunit"></div>
+    <script type="text/javascript" src="qunit-1.10.0/qunit.1.10.0.js"></script>
+    <script type="text/javascript" src="Workers/EngineTest.js"></script>
 </body>
 </html>
