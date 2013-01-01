@@ -16,9 +16,13 @@
 
         this.model.set('engineStart', time.ms());
 
+        this.model.set('run', true);
         // Run first update immediately and then at gps speed
         this.updateGame();
-        window.setInterval(this.updateGame.bind(this), 1000 / this.model.get('gps'));
+
+        // TODO: does it make sense to set these on the model, instead of as a property
+        // this will only be used by the Engine
+        this.model.set('gameInterval', window.setInterval(this.updateGame.bind(this), 1000 / this.model.get('gps')));
 
         this.requestAnimationFrame(this.updateUi.bind(this));
     };
@@ -31,7 +35,7 @@
     };
 
     Engine.prototype.pause = function () {
-
+        this.model.set('run', false);
     };
 
     Engine.prototype.updateUi = function () {
@@ -42,10 +46,17 @@
 
         // Only update the UI if enough time has passed as described by the fps
         if (now - previous >= msFps) {
+
             this.model.set('uiTicks', this.model.get('uiTicks') + 1);
             this.model.set('msPreviousUiTick', now);
         }
-        this.requestAnimationFrame(this.updateUi.bind(this));
+
+        if (this.model.get('run')) {
+
+            this.requestAnimationFrame(this.updateUi.bind(this));
+        } else {
+            clearInterval(this.model.get('gameInterval'))
+        }
     };
 
     Engine.prototype.timeSinceLastUpdate = function() {
@@ -66,7 +77,11 @@
     })();
 
     Engine.prototype.updateGame = function () {
-        this.model.set('gameTicks', this.model.get('gameTicks') + 1);
+        if (this.model.get('run')) {
+            this.model.set('gameTicks', this.model.get('gameTicks') + 1);
+        } else {
+
+        }
     };
 
     Workers.Engine = Engine;

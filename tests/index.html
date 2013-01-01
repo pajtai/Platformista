@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset=utf-8>
     <title>Platformista Tests</title>
 
     <link rel="stylesheet" type="text/css" href="qunit-1.10.0/qunit.1.10.0.css">
@@ -19,6 +20,9 @@
     <!-- Models -->
     <script type="text/javascript" src="../application/Models/Engine.js"></script>
 
+    <!-- Views -->
+    <script type="text/javascript" src="../application/Views/Canvas.js"></script>
+
     <!-- Workers -->
     <script type="text/javascript" src="../application/Workers/Engine.js"></script>
 
@@ -28,8 +32,10 @@
 </head>
 
 <body>
+    <canvas id="platformista"></canvas>
     <div id="qunit"></div>
     <script type="text/javascript" src="qunit-1.10.0/qunit.1.10.0.js"></script>
+    <script type="text/javascript" src="Views/CanvasTest.js"></script>
     <script type="text/javascript" src="Workers/EngineTest.js"></script>
 </body>
 </html>

@@ -26,7 +26,11 @@
 
             msPreviousUiTick: 0,
 
-            msPreviousGameTick: 0
+            msPreviousGameTick: 0,
+
+            run: false,
+
+            gameInterval: undefined
         }
     });
 }(Backbone, plat));
