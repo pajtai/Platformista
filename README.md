@@ -1,4 +1,4 @@
-platformista
+Platformista
 ============
 
 ### Features to implement:
