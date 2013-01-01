@@ -1,9 +1,9 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Sprite = Backbone.Model.extend({
+    Platformista.Models.Sprite = Backbone.Model.extend({
 
         defaults: {
 
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

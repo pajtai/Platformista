@@ -1,6 +1,6 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Tilemap = Backbone.Model.extend({
+    Platformista.Models.Tilemap = Backbone.Model.extend({
 
         defaults: {
 
@@ -20,4 +20,4 @@
             mapDefinitions: {}
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

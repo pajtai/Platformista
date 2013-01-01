@@ -1,6 +1,6 @@
-(function(plat, undefined){
+(function(Platformista, undefined){
 
-    console.log("plat is " + (undefined === plat ? "not" : "") + " defined");
+    console.log("Platformista is " + (undefined === Platformista ? "not" : "") + " defined");
 
-    plat.workers.engine.start();
-}(plat));
+    Platformista.workers.engine.start();
+}(Platformista));

@@ -1,6 +1,6 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Engine = Backbone.Model.extend({
+    Platformista.Models.Engine = Backbone.Model.extend({
 
         defaults: {
 
@@ -33,4 +33,4 @@
             gameInterval: undefined
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

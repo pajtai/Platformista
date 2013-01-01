@@ -1,16 +1,21 @@
-(function(Bacbkone, plat){
+(function(Bacbkone, Platformista){
 
-    plat.Views.Canvas = Backbone.View.extend({
+    Platformista.Views.Canvas = Backbone.View.extend({
 
         initialize: function() {
 
         },
 
+        el: function(canvasSelector) {
+
+            return $(canvasSelector)[0];
+        },
+
         // Set the Canvas by passing in the selector for the canvas element
-        // ```new plat.Views.Canvas({canvas:"#plat"});```
+        // ```new Platformista.Views.Canvas({canvas:"#Platformista"});```
         setCanvas: function(canvasSelector) {
 
             this.el(canvasSelector);
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

@@ -1,6 +1,6 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Being = Backbone.Model.extend({
+    Platformista.Models.Being = Backbone.Model.extend({
 
         defaults: {
 
@@ -12,4 +12,4 @@
             sprite: {}
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

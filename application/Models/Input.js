@@ -1,9 +1,9 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Input = Backbone.Model.extend({
+    Platformista.Models.Input = Backbone.Model.extend({
 
         defaults: {
 
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

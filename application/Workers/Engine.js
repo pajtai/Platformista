@@ -1,7 +1,7 @@
-(function (plat, window) {
+(function (Platformista, window) {
 
-    var Workers = plat.Workers,
-        time = plat.utilities.time,
+    var Workers = Platformista.Workers,
+        time = Platformista.utilities.time,
         Engine = function (model) {
 
             this.model = model;
@@ -85,4 +85,4 @@
     };
 
     Workers.Engine = Engine;
-}(plat, window));
+}(Platformista, window));

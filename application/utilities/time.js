@@ -1,9 +1,9 @@
-(function(plat) {
+(function(Platformista) {
 
-    plat.utilities.time = {
+    Platformista.utilities.time = {
 
         ms: function() {
             return new Date().getTime();
         }
     };
-}(plat));
+}(Platformista));

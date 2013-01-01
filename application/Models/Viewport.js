@@ -1,6 +1,6 @@
-(function(Backbone, plat){
+(function(Backbone, Platformista){
 
-    plat.Models.Viewport = Backbone.Model.extend({
+    Platformista.Models.Viewport = Backbone.Model.extend({
 
         defaults: {
 
@@ -17,4 +17,4 @@
             centerY: 200
         }
     });
-}(Backbone, plat));
+}(Backbone, Platformista));

@@ -1,11 +1,12 @@
 // Wrap everything to allow for parent scope for variable sharing
 (function() {
 
-    // TODO: reinitalize plat before each test or at least before each module
     var uiTicks,
         gameTicks,
-        engine = plat.workers.engine;
+        platInst = Platformista.new(),
+        engine = platInst.workers.engine;
 
+    console.log("Platformista is: " + Platformista);
     module("Engine: Ticks");
     test("for 2 fps for 1 second", function() {
 
