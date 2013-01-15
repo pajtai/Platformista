@@ -5,5 +5,6 @@
 
     module("Canvas");
     canvas.setCanvas("#platformista");
+    console.log("few " + canvas.$el.attr('id'));
 
 }());
